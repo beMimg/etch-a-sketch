@@ -48,8 +48,8 @@ body, html {
   height: 500px;
   width: 500px;
   border: 2px solid black;
-  margin-bottom: 30px;
   display: grid;
+  margin-bottom: 20px;
 }
 
 .controls, .mode {
