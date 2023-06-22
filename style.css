@@ -51,7 +51,7 @@ body, html {
   gap: 30px;
 }
 
-.size {
+#popup {
   height: 65px;
   width: 90px;
 }
