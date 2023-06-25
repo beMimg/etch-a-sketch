@@ -1,18 +1,19 @@
 let choice = 'black';
+const btnPopup = document.querySelector("#popup");
+const board = document.querySelector(".board");
+const btnSmall = document.querySelector("#small_density");
+const btnMedium = document.querySelector("#medium_density");
+const btnBig = document.querySelector("#big_density");
 
-document.addEventListener("DOMContentLoaded", function(){
-  createBoard(16);
+createBoard(16);
 
-    let btn_popup = document.querySelector("#popup");
-    btn_popup.addEventListener("click", function(){
-      let size = askSize();
-      createBoard(size);
-  })
+btnPopup.addEventListener("click", function(){
+  let size = askSize();
+  createBoard(size);
 })
 
 function createBoard(size){
-  let board = document.querySelector(".board");
-  
+
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
@@ -20,9 +21,9 @@ function createBoard(size){
       for(let i = 0; i < numDivs; i++){       
         let div = document.createElement("div");
         div.addEventListener("mouseover",function(){
-          div.style.backgroundColor="black";
+          div.style.backgroundColor= choice;
         })
-        board.insertAdjacentElement("beforeend", div);
+        board.append(div);
       }
 }
 
@@ -41,4 +42,18 @@ function askSize(){
   }
 }
 
-  
+btnSmall.addEventListener("click", function(){
+  colorChoice("darkgrey");
+})
+
+btnMedium.addEventListener("click", function(){
+  colorChoice("grey");
+})
+
+btnBig.addEventListener("click", function(){
+  colorChoice("black");
+})
+
+function colorChoice(newColorChoice){  
+    choice = newColorChoice
+}
