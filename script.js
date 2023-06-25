@@ -4,6 +4,8 @@ const board = document.querySelector(".board");
 const btnSmall = document.querySelector("#small_density");
 const btnMedium = document.querySelector("#medium_density");
 const btnBig = document.querySelector("#big_density");
+const btnErase = document.querySelector("#erase");
+const btnClassic = document.querySelector("#classic_mode");
 
 createBoard(16);
 
@@ -52,8 +54,25 @@ btnMedium.addEventListener("click", function(){
 
 btnBig.addEventListener("click", function(){
   colorChoice("black");
+})  
+
+btnClassic.addEventListener("click", function(){
+  colorChoice("black");
 })
 
 function colorChoice(newColorChoice){  
     choice = newColorChoice
 }
+
+btnErase.addEventListener("click", function(){
+  eraseBoard();
+})
+
+function eraseBoard(){
+  let boardChilds = document.querySelectorAll(".board div");
+    for(let i = 0; i < boardChilds.length; i++){
+      boardChilds[i].style.backgroundColor = "white";
+    }  
+}
+
+
