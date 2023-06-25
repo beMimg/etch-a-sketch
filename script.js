@@ -61,7 +61,7 @@ btnClassic.addEventListener("click", function(){
 })
 
 function colorChoice(newColorChoice){  
-    choice = newColorChoice
+  choice = newColorChoice
 }
 
 btnErase.addEventListener("click", function(){
@@ -70,9 +70,7 @@ btnErase.addEventListener("click", function(){
 
 function eraseBoard(){
   let boardChilds = document.querySelectorAll(".board div");
-    for(let i = 0; i < boardChilds.length; i++){
-      boardChilds[i].style.backgroundColor = "white";
-    }  
-}
-
-
+  boardChilds.forEach(boardChild => {
+    boardChild.style.backgroundColor = "white";
+  });
+} 
