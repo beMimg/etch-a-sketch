@@ -71,6 +71,6 @@ btnErase.addEventListener("click", function(){
 function eraseBoard(){
   let boardChilds = document.querySelectorAll(".board div");
   boardChilds.forEach(boardChild => {
-    boardChild.style.backgroundColor = "white";
+    boardChild.style.backgroundColor = "rgb(231, 231, 231)";
   });
 } 
