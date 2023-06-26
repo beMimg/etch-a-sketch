@@ -6,6 +6,7 @@ const btnMedium = document.querySelector("#medium_density");
 const btnBig = document.querySelector("#big_density");
 const btnErase = document.querySelector("#erase");
 const btnClassic = document.querySelector("#classic_mode");
+const btnRandom = document.querySelector("#random_mode");
 
 createBoard(16);
 
@@ -19,14 +20,14 @@ function createBoard(size){
   board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-    let numDivs = size * size;
-      for(let i = 0; i < numDivs; i++){       
-        let div = document.createElement("div");
-        div.addEventListener("mouseover",function(){
-          div.style.backgroundColor= choice;
-        })
-        board.append(div);
-      }
+  let numDivs = size * size;
+    for(let i = 0; i < numDivs; i++){       
+      let div = document.createElement("div");
+      div.addEventListener("mouseover",function(){
+        div.style.backgroundColor= choice;
+      })
+      board.append(div);
+    }
 }
 
 function askSize(){
@@ -74,3 +75,15 @@ function eraseBoard(){
     boardChild.style.backgroundColor = "rgb(231, 231, 231)";
   });
 } 
+
+btnRandom.addEventListener("click", function(){
+  colorChoice(getRandomColor());
+})
+
+
+function getRandomColor(){
+  const rainbowColors = ["rgb(255, 0, 0)", "rgb(255, 3, 234)", "rgb(11, 3, 255)", "rgb(3, 205, 255)", "rgb(3, 255, 91)", "rgb(242, 255, 3)"];
+  const randomIndex = Math.floor(Math.random() * rainbowColors.length);
+  const randomColor = rainbowColors[randomIndex];
+  return randomColor;
+}
