@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style.css">
-  <title>Etch-a-Sketch</title>
-</head>
-<body>
-
-  <div class="box_game">
-
-    <header class="header">
-      <p class="heading">Etch-a-Sketch</p>
-    </header>
-<!-- to be fixed -->
-    <div class="middle_section">
-      <button id="popup">Size</button>
-      <div class="board"></div>
-      <div class="pen"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <div class="box_game">
+      <header class="header">
+        <p class="heading">Etch-a-Sketch</p>
+      </header>
+      <!-- to be fixed -->
+      <div class="middle_section">
+        <button id="popup">Size</button>
+        <div class="board"></div>
+        <div class="pen"></div>
+      </div>
+      <!-- / to be fixed end -->
+      <div class="controls">
+        <p id="grid_density">Grid density:</p>
+        <button id="small_density">Small</button>
+        <button id="medium_density">Medium</button>
+        <button id="big_density">Big</button>
+      </div>
+      <div class="mode">
+        <p>Mode:</p>
+        <button id="classic_mode">Classic</button>
+        <button id="random_mode">Random</button>
+        <button id="erase">Erase</button>
+      </div>
     </div>
-<!-- / to be fixed end -->
-    <div class="controls">
-      <p id="grid_density">Grid density:</p>
-      <button id="small_density">Small</button>
-      <button id="medium_density">Medium</button>
-      <button id="big_density">Big</button>
-    </div>
-    <div class="mode">
-      <p>Mode:</p>
-      <button id="classic_mode">Classic</button>
-      <button id="random_mode">Random</button>
-      <button id="erase">Erase</button>
-    </div>
-  
-  </div>  
-  
-  <footer class="footer">
-    Built by Bernardo Guerreiro - bernyig
-  </footer>
 
-  <script src="script.js"></script>
-</body>
+    <footer class="footer">Built by Bernardo Guerreiro - bernyig</footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
